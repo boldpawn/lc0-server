@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t lc0-server .
+docker build -t boldpawn/lc0-server .
