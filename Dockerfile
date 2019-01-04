@@ -13,9 +13,9 @@ RUN     pip3 install --upgrade meson
 RUN     git clone -b release/0.20 --recurse-submodules https://github.com/LeelaChessZero/lc0.git
 RUN     cd /lc0 && ./build.sh
 RUN     apt-get install wget
-RUN wget -O /weights_run2_32194.pb http://lczero.org/get_network?sha=bd0909fe765bf4b385d0e583e6b7aaf784a447d43fbd63b6853b488032831b24
-RUN    chmod 777 /lc0/build/release/lc0
-RUN     chmod 666 /weights_run2_32194.pb
+RUN     wget -O /lc0/build/release/weights_run2_32194.pb http://lczero.org/get_network?sha=bd0909fe765bf4b385d0e583e6b7aaf784a447d43fbd63b6853b488032831b24
+RUN     chmod 755 /lc0/build/release/lc0
+RUN     chmod 666 /lc0/build/release/weights_run2_32194.pb
 ## Expose the mini-inetd port
 EXPOSE  8080
 
